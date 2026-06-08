@@ -1,28 +1,16 @@
-<!DOCTYPE html>
-<html lang ="ja">
-  <head>
-    <meta charset="UTF-8">
-    <link rel ="stylesheet" href="../../assets/stylesheets/top.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bookers</title>
-  </head>
-
-  <body>
-    <h1>
-      <strong>Bookers</strong>
-    </h1>
-    <div class="div-text">
-      <p>
-        <strong>Bookers<strong>
-        では様々な書籍に関する意見や
-      </p>
-
-      <p>
-        印象を共有することができます
-      </p>
-
-       <%# 一覧表示画面へ遷移 %>
-      <%= link_to "start",bookers_path%>
-    </div>
-  </body>
-<html>
+<body class="top_body">
+  <h1 class="top_h1">
+    <strong>Bookers</strong>
+  </h1>
+  <div class="div_top_text">
+    <p>
+      <strong>Bookers<strong>
+      では様々な書籍に関する意見や
+    </p>
+    <p>
+      印象を共有することができます
+    </p>
+     <%# 一覧表示画面へ遷移 %>
+    <%= link_to "start",books_path%>
+  </div>
+</body>
