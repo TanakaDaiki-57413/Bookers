@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang ="ja">
-<head>
-  <meta charset="UTF-8">
-  <link rel ="stylesheet" href="../../assets/stylesheets/top.css">
-  <title>Bookers</title>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <link rel ="stylesheet" href="../../assets/stylesheets/top.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookers</title>
+  </head>
 
-<body>
-  <div class ="tytle_div">
+  <body>
     <h1>
-      ようこそ<strong>Bookers</strong>へ！
+      <strong>Bookers</strong>
     </h1>
-  </div>
+    <div class="div-text">
+      <p>
+        <strong>Bookers<strong>
+        では様々な書籍に関する意見や
+      </p>
 
-  <p>
-    <strong>Bookers</strong> では、さまざまな書籍に関するあなたの意見や
-  </p>
+      <p>
+        印象を共有することができます
+      </p>
 
-  <p>
-    印象を共有し交換することができます
-  </p>
-  <%# 一覧表示画面へ遷移 %>
-  <%= link_to "start",bookers_path%>
-</body>
+       <%# 一覧表示画面へ遷移 %>
+      <%= link_to "start",bookers_path%>
+    </div>
+  </body>
+<html>
