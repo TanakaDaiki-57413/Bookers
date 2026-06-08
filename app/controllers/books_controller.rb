@@ -5,7 +5,7 @@ class BooksController < ApplicationController
 
   #一覧表示アクション
   def index
-    @book = Book.new
+    @books = Book.all
   end
 
   #詳細画面アクション

@@ -12,47 +12,22 @@
             <th>body</th>
             <th></th>
         </tr>
-        <tr>
-          <td class="td_title">セミナー名</td>
-          <td class="td_body">1日速習HTML・CSSセミナー1日速習1日速習HTML・CSSセミナー1日速習1日速習HTML・CSSセミナー1日速習1日速習HTML・CSSセミナー1日速習1日速習HTML・CSSセミナー1日速習</td>
-          <td class="button">
-            <a href="#">Show</a>
-            <a href="#">Edit</a>
-            <a href="#">Destroy</a>
-          </td>
-        </tr>
-        <tr>
-          <td>開催日時</td>
-          <td>2020年10月31日</td>
-          <td class="button">
-            <a href="#">Show</a>
-            <a href="#">Edit</a>
-            <a href="#">Destroy</a>
-          </td>
-        </tr>
-        <tr>
-          <td>開催場所</td>
-          <td>大阪市内セミナールーム</td>
-          <td class="button">
-            <a href="#">Show</a>
-            <a href="#">Edit</a>
-            <a href="#">Destroy</a>
-          </td>
-        </tr>
-        <tr>
-          <td>参加費用</td>
-          <td>11,000(税込)</td>
-          <td class="button">
-            <a href="#">Show</a>
-            <a href="#">Edit</a>
-            <a href="#">Destroy</a>
-          </td>
-        </tr>
+        <% @books.each do |book|%>
+          <tr>
+            <td><%=book.title%></td>
+            <td><%=book.body%></td>
+            <td class="button">
+              <%= link_to "Show",book_path(book.id)%>
+              <a href="#">Edit</a>
+              <a href="#">Destroy</a>
+            </td>
+          <tr>
+        <% end%>       
       </table>
     </div>
     <%# 新規登録ポジション %>
     <div class="create_region">
-      <%= form_with model: @book  do |f| %>
+      <%= form_with model: Book.new  do |f| %>
         <h3>New Book</h3>
         <p>Title</p>
         <%= f.text_field :title %>
