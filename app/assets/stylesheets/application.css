@@ -4,3 +4,87 @@
   box-sizing: border-box;
 }
 
+/* トップページCSS ---------------------------------------------*/
+.top_body {
+  width: 100%;
+  color: #333333;
+  line-height: 18px;
+  text-align: center;
+}
+
+.top_h1 {
+  font-size: 24px;
+  margin-top: 34px;
+}
+
+.div_top_text {
+  text-align: left;
+  display: inline-block;
+}
+
+.div_top_text p {
+  margin: 40px;
+}
+
+.div_top_text a {
+  display: block;
+  text-align: right;
+  margin-right: 12%;
+}
+
+/* -------------------------------------------------- */
+
+/* 新規登録画面・一覧表示画面--------------------------  */
+
+.index_main {
+  width: 80%;
+  margin-top: 40px;
+  display: flex;
+  background-color: yellow;
+
+}
+
+.list_region {
+  width: 60%;
+  height: 400px;
+  background-color: red;
+}
+
+.table_region {
+  width: 100%;
+  font-size: 12px;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.table_region tr>th {
+  text-align: center;
+  padding: 12px;
+}
+
+.table_region tr>td {
+  padding: 10px;
+}
+
+/* 隣のbodyの文字数に高さを合わせる */
+.button {
+  vertical-align: middle;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.button a {
+  margin-right: 10px;
+}
+
+.create_region {
+  width: 40%;
+  height: 400px;
+  background-color: blue;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+}

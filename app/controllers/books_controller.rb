@@ -5,6 +5,7 @@ class BooksController < ApplicationController
 
   #一覧表示アクション
   def index
+    @book = Book.new
   end
 
   #詳細画面アクション
@@ -17,6 +18,7 @@ class BooksController < ApplicationController
 
   #データ更新
   def create
+    @book = Book.new(list_params)
   end
 
   #データ削除
