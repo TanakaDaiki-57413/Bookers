@@ -32,8 +32,6 @@
   margin-right: 12%;
 }
 
-/* -------------------------------------------------- */
-
 /* 新規登録画面・一覧表示画面--------------------------  */
 
 .index_header {
@@ -67,6 +65,7 @@
 
 .table_region tr>td {
   padding: 10px;
+  overflow-wrap: break-word;
 }
 
 /* 隣のbodyの文字数に高さを合わせる */
@@ -83,14 +82,13 @@
 .create_region {
   width: 40%;
   height: 400px;
-  /* background-color: blue; */
   display: flex;
 }
 
 .create_region h3,
 p,
-input[type="text"],
-input[type="submit" i],
+.create_region input[type="text"],
+.create_region input[type="submit" i],
 textarea {
   margin-left: 30%;
 }
@@ -100,13 +98,103 @@ textarea {
   margin-top: 10px;
 }
 
-textarea {
+.create_region textarea {
   resize: none;
   width: 150px;
   height: 34px;
 }
 
-input[type="submit" i] {
+.create_region input[type="submit" i] {
   width: 90px;
   margin-top: 10px
+}
+
+/* 編集画面--------------------- */
+.share_main {
+  margin-top: 15px;
+  margin-left: 50px;
+}
+
+.share_main h4 {
+  margin-top: 15px;
+}
+
+.edit_div {
+  width: 40%;
+  display: block;
+}
+
+.div_f {
+  margin: 14px;
+}
+
+.div_f input[type="text"] {
+  width: 50%;
+}
+
+.div_f textarea {
+  width: 50%;
+  margin-left: 0;
+  resize: none;
+}
+
+.div_submit {
+  width: 50%;
+  display: block;
+  text-align: right;
+
+}
+
+.div_submit input[type="submit" i] {
+  width: 35%;
+}
+
+.div_link {
+  width: 50%;
+  text-align: right;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.div_link a {
+  margin: 10px;
+  margin-right: 0;
+}
+
+/* 詳細画面--------------------------*/
+
+/* .share_mainはeditファイルと共有 */
+/* .share_main {
+  margin-top: 15px;
+  margin-left: 50px;
+} */
+
+/* .share_main h4 {
+  margin-top: 15px;
+} */
+
+.show_div {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+
+.show_content h4 {
+  width: 100px;
+  margin: 0;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.show_content p {
+  margin: 0;
+  margin-top: 20px;
+}
+
+.show_div_link {
+  margin-top: 40px;
+}
+
+.show_div_link a {
+  margin-right: 10px;
 }

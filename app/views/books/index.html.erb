@@ -18,8 +18,8 @@
             <td><%=book.body%></td>
             <td class="button">
               <%= link_to "Show",book_path(book.id)%>
-              <a href="#">Edit</a>
-              <a href="#">Destroy</a>
+              <%= link_to "Edit",edit_book_path(book.id)%>
+              <%= link_to "Destroy",book_path(book.id), data: { turbo_method: :delete, turbo_confirm:"確認：本当に削除しますか？" } %> 
             </td>
           <tr>
         <% end%>       
@@ -36,7 +36,7 @@
         <%= f.text_area :body %>
 
         <br>
-        <%= f.submit '投稿' %>
+        <%= f.submit 'Create Book' %>
       <% end %>
     </div>
   </main>
