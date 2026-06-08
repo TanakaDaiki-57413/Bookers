@@ -36,18 +36,21 @@
 
 /* 新規登録画面・一覧表示画面--------------------------  */
 
-.index_main {
-  width: 80%;
-  margin-top: 40px;
-  display: flex;
-  background-color: yellow;
+.index_header {
+  margin-top: 15px;
+  margin-left: 30px;
+}
 
+.index_main {
+  width: 90%;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 50px;
 }
 
 .list_region {
   width: 60%;
   height: 400px;
-  background-color: red;
 }
 
 .table_region {
@@ -80,11 +83,30 @@
 .create_region {
   width: 40%;
   height: 400px;
-  background-color: blue;
+  /* background-color: blue; */
+  display: flex;
 }
 
-@media screen and (max-width: 768px) {
-  body {
-    flex-direction: column;
-  }
+.create_region h3,
+p,
+input[type="text"],
+input[type="submit" i],
+textarea {
+  margin-left: 30%;
+}
+
+
+.create_region p {
+  margin-top: 10px;
+}
+
+textarea {
+  resize: none;
+  width: 150px;
+  height: 34px;
+}
+
+input[type="submit" i] {
+  width: 90px;
+  margin-top: 10px
 }

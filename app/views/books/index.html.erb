@@ -1,12 +1,12 @@
-<body class="index_body">
-  <headder class="share_headder">
+<body>
+  <header class="index_header">
     <h1>Bookers</h1>
-  </headder>
+  </header>
 
   <main class="index_main">
     <%# 一覧表示ポジション %>
     <div class="list_region">
-      <table class="table_region" border="1">
+      <table class="table_region" border="1" bordercolor="black">
         <tr>
             <th>Title</th>
             <th>body</th>
@@ -53,12 +53,14 @@
     <%# 新規登録ポジション %>
     <div class="create_region">
       <%= form_with model: @book  do |f| %>
-        <h4>タイトル</h4>
+        <h3>New Book</h3>
+        <p>Title</p>
         <%= f.text_field :title %>
 	
-        <h4>本文</h4>
+        <p>body</p>
         <%= f.text_area :body %>
 
+        <br>
         <%= f.submit '投稿' %>
       <% end %>
     </div>
