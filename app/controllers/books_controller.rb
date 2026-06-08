@@ -10,19 +10,34 @@ class BooksController < ApplicationController
 
   #詳細画面アクション
   def show
+    @book = Book.find(params[:id])
   end
 
   #編集画面アクション
   def edit
   end
 
-  #データ更新
+  #データ作成
   def create
-    @book = Book.new(list_params)
+    @book = Book.new(book_params)
+    @book.save
+    redirect_to book_path(@book.id)
+    # if @book.save  #データ入力チェック
+    #   flash[:notice] = "投稿に成功しました"
+    #   redirect_to books_path(@book.id)
+    # else 
+    #   flash.now[:alert] = "投稿に失敗しました"
+    #   render :index, status: :unprocessable_entity
+    # end
   end
 
   #データ削除
   def destroy
   end
 
+  private
+  # ストロングパラメータ
+  def book_params
+    params.require(:book).permit(:title, :body)
+  end
 end
