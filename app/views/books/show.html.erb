@@ -1,6 +1,9 @@
 <body>
   <header class="index_header">
     <h1>Bookers</h1>
+    <% flash.each do |message_type, message| %>
+        <div class="color_succsess <%= message_type %>"><%= message %></div>
+    <% end %>
   </header>
   <main class="share_main">
     <h3>Show Book</h3>

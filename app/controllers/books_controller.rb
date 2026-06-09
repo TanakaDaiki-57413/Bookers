@@ -1,10 +1,10 @@
 class BooksController < ApplicationController
-  #新規登録アクション
   def new
   end
 
   #一覧表示アクション
   def index
+    @book = Book.new
     @books = Book.all
   end
 
@@ -21,28 +21,33 @@ class BooksController < ApplicationController
   #データ作成
   def create
     @book = Book.new(book_params)
-    @book.save
-    redirect_to book_path(@book.id)
-    # if @book.save  #データ入力チェック
-    #   flash[:notice] = "投稿に成功しました"
-    #   redirect_to books_path(@book.id)
-    # else 
-    #   flash.now[:alert] = "投稿に失敗しました"
-    #   render :index, status: :unprocessable_entity
-    # end
+    if @book.save  #バリデーションチェック
+       flash[:notice] = "Book was successfully created."
+       redirect_to book_path(@book.id)
+    else 
+      @books = Book.all
+      flash.now[:alert] = "Book was error created."
+      render :index, status: :unprocessable_entity
+    end
   end
 
+  #データ更新
   def update
     book = Book.find(params[:id])
-    book.update(book_params)
-    redirect_to book_path(book.id)
+    if book.update(book_params)
+      flash[:notice] = "Book was successfully updated."
+      redirect_to book_path(book.id)
+    end
   end
 
   #データ削除
   def destroy
     book = Book.find(params[:id])
-    book.destroy
-    redirect_to "/books"
+    if book.destroy
+      flash[:notice] = "Book was successfully destroyed."
+      redirect_to "/books"
+    end
+    
   end
 
   private
