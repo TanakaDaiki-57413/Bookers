@@ -1,6 +1,4 @@
 class BooksController < ApplicationController
-  def new
-  end
 
   #一覧表示アクション
   def index

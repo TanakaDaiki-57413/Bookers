@@ -2,6 +2,7 @@
   <header class="index_header">
     <h1>Bookers</h1>
 
+    <%# フラッシュメッセージ表示・カラー適用 %>
     <% flash.each do |message_type, message| %>
         <% if @book.errors.any? %>
           <div class="color_error <%= message_type %>"><%= message %></div>
@@ -39,6 +40,7 @@
       <%= form_with model: @book  do |f| %>
         <h3>New Book</h3>
 
+        <%# バリデーションチェック %>
         <% if @book.errors.any? %>
           <p class="color_error">Title  ※Not Entered</p>
         <% else %>
@@ -46,7 +48,8 @@
         <%end%> 
 
         <%= f.text_field :title %>
-	
+
+        <%# バリデーションチェック %>
         <% if @book.errors.any? %>
           <p class="color_error">Body  ※Not Entered</p>
         <% else %>
@@ -59,6 +62,7 @@
         <%= f.submit 'Create Book' %>
       <% end %>
 
+      <%# エラーメッセージ表示 %>
       <div class="error_region">
         <% if @book.errors.any? %>
           <%= @book.errors.count %>件のエラーが発生しました

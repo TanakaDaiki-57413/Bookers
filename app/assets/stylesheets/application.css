@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-/* トップページCSS ---------------------------------------------*/
+/* トップページCSS(homes#top) ---------------------------------------------*/
 .top_body {
   width: 100%;
   color: #333333;
@@ -32,7 +32,7 @@
   margin-right: 12%;
 }
 
-/* 新規登録画面・一覧表示画面--------------------------  */
+/* 新規登録画面・一覧表示画面(books#index)--------------------------  */
 
 .index_header {
   margin-top: 15px;
@@ -124,7 +124,11 @@ textarea {
   color: red;
 }
 
-/* 編集画面--------------------- */
+.color_succsess {
+  color: #008000;
+}
+
+/* 編集画面(books#edit)--------------------- */
 .share_main {
   margin-top: 15px;
   margin-left: 50px;
@@ -176,7 +180,7 @@ textarea {
   margin-right: 0;
 }
 
-/* 詳細画面--------------------------*/
+/* 詳細画面(books#show)--------------------------*/
 
 /* .share_mainはeditファイルと共有 */
 /* .share_main {
@@ -214,6 +218,7 @@ textarea {
   margin-right: 10px;
 }
 
-.color_succsess {
+/* indexファイルの使いまわし */
+/* .color_succsess {
   color: #008000;
-}
+} */

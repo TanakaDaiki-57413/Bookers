@@ -1,6 +1,7 @@
 <body>
   <header class="index_header">
     <h1>Bookers</h1>
+    <%# フラッシュメッセージ %>
     <% flash.each do |message_type, message| %>
         <div class="color_succsess <%= message_type %>"><%= message %></div>
     <% end %>
@@ -19,6 +20,8 @@
         <p><%= @book.body %></p>
       </div>
     </div>
+
+    <%# index or edit へ画面遷移 %>
     <div class="show_div_link">
       <%= link_to "Edit",edit_book_path(@book.id) %>
       <%= link_to "Back", books_path %>
