@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   #ルーティング設定
   resources :books
-  get "/bookers" => "homes#top"
+  root to: 'homes#top'
 end

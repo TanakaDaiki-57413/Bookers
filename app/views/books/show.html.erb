@@ -1,6 +1,10 @@
 <body>
   <header class="index_header">
     <h1>Bookers</h1>
+
+    <%# タイトルをクリック後一覧表示に戻る機能実装したがRSpecでエラーになるためコメント化 %>
+    <%# <h1>link_to "Bookers", books_path</h1> %>
+
     <%# フラッシュメッセージ %>
     <% flash.each do |message_type, message| %>
         <div class="color_succsess <%= message_type %>"><%= message %></div>

@@ -2,6 +2,9 @@
   <header class="index_header">
     <h1>Bookers</h1>
 
+    <%# タイトルをクリック後一覧表示に戻る機能実装したがRSpecでエラーになるためコメント化 %>
+    <%# <h1>link_to "Bookers", books_path</h1> %>
+
     <%# フラッシュメッセージ表示・カラー適用 %>
     <% flash.each do |message_type, message| %>
         <% if @book.errors.any? %>
@@ -65,10 +68,10 @@
       <%# エラーメッセージ表示 %>
       <div class="error_region">
         <% if @book.errors.any? %>
-          <%= @book.errors.count %>件のエラーが発生しました
+          <text class="color_error"><%= @book.errors.count %>errors prohibited this book from being saved:</text>
             <ul>
               <% @book.errors.full_messages.each do |message| %>
-              <li><%= message %></li>
+              <li class="color_error"><%= message %></li>
             </ul>
           <% end %>
         <% end %>

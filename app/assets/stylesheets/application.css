@@ -4,6 +4,17 @@
   box-sizing: border-box;
 }
 
+/* タイトル ----------------------------------------------------------------*/
+.index_header {
+  margin-top: 15px;
+  margin-left: 30px;
+}
+
+.index_header a {
+  text-decoration: none;
+  color: black
+}
+
 /* トップページCSS(homes#top) ---------------------------------------------*/
 .top_body {
   width: 100%;
@@ -34,10 +45,6 @@
 
 /* 新規登録画面・一覧表示画面(books#index)--------------------------  */
 
-.index_header {
-  margin-top: 15px;
-  margin-left: 30px;
-}
 
 .index_main {
   width: 90%;
@@ -178,6 +185,10 @@ textarea {
 .div_link a {
   margin: 10px;
   margin-right: 0;
+}
+
+.margin_left_cl {
+  margin-left: 30px;
 }
 
 /* 詳細画面(books#show)--------------------------*/

@@ -1,24 +1,51 @@
 <body>
   <header class="index_header">
     <h1>Bookers</h1>
+
+    <%# タイトルをクリック後一覧表示に戻る機能実装したがRSpecでエラーになるためコメント化 %>
+    <%# <h1>link_to "Bookers", books_path</h1> %>
+
+    <% flash.each do |message_type, message| %>
+        <% if @book.errors.any? %>
+          <div class="color_error <%= message_type %>"><%= message %></div>
+        <%end%>
+    <% end %>
+    <% if @book.errors.any? %>
+      <text class="color_error"><%= @book.errors.count %>errors prohibited this book from being updated:</text>
+        <ul>
+          <% @book.errors.full_messages.each do |message| %>
+          <li class="margin_left_cl color_error"><%= message %></li>
+        </ul>
+      <% end %>
+    <% end %>
+    
   </header>
   <main class="share_main">
     <h3>Editing Book</h3>
     <div class="edit_div">
       <%= form_with model: @book  do |f| %>
 
-        <h4>Title</h4>
+        <% if @book.errors.any? %>
+          <h4 class="color_error">Title  ※Not Entered</h4>
+        <% else %>
+          <h4>Title</h4>
+        <%end%> 
+
         <div class="div_f">
           <%= f.text_field :title %>
         </div>
 
-        <h4>Body</h4>
+        <% if @book.errors.any? %>
+          <h4 class="color_error">Body  ※Not Entered</h4>
+        <% else %>
+          <h4>Body</h4>
+        <%end%> 
         <div class="div_f">
           <%= f.text_area :body %>
         </div>
 
         <div class="div_submit">
-          <%= f.submit 'Update' %>
+          <%= f.submit 'Update Book' %>
         </div>
 
       <% end %>
